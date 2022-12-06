@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -10,11 +9,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ItemRegisterTrainingComponent implements OnInit {
 
   formTraining: FormGroup = new FormGroup({});
-  //constructor(private http: HttpClient){};
-  constructor(private formBuilder: FormBuilder, http: HttpClient) {
+  constructor(formBuilder: FormBuilder) {
     this.formTraining = formBuilder.group({
-      //date:new Date(),
-      //modules:['']
       title: ['', [Validators.required]],
       teatcher: ['', [Validators.required]],
       duration: ['', [Validators.required, Validators.min(8)]],
@@ -24,9 +20,9 @@ export class ItemRegisterTrainingComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
+  
   ShowData() {
     console.log(this.formTraining);
-    debugger;
   }
 }

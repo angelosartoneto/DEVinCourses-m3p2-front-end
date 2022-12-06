@@ -10,36 +10,18 @@
                 <div class="col">
                   <div class="row g-3">
                     <div class="col">
-                      <label for="treinamento" class="form-label"
-                        >Treinamento</label
-                      >
-                      <input
-                        formControlName="title"
-                        type="text"
-                        class="form-control"
-                        id="title"
-                        placeholder="Digite o nome do Treinamento"
-                        value=""
-                        required=""
-                      />
+                      <label for="treinamento" class="form-label">Treinamento</label>
+                      <input formControlName="title" type="text" class="form-control" id="title"
+                        placeholder="Digite o nome do Treinamento" value="" required="" />
                       <div class="invalid-feedback">
                         Digite um nome de treinamento válido.
                       </div>
                     </div>
-                    ​
+                                       ​
                     <div class="col">
-                      <label for="professor" class="form-label"
-                        >Professor</label
-                      >
-                      <input
-                        formControlName="teatcher"
-                        type="text"
-                        class="form-control"
-                        id="teatcher"
-                        placeholder="Digite o nome do Professor"
-                        value=""
-                        required=""
-                      />
+                      <label for="professor" class="form-label">Professor</label>
+                      <input formControlName="teatcher" type="text" class="form-control" id="teatcher"
+                        placeholder="Digite o nome do Professor" value="" required="" />
                       <div class="invalid-feedback">Digite um nome válido.</div>
                     </div>
                   </div>
@@ -47,48 +29,26 @@
                     <div class="col">
                       <div class="row g-3">
                         <div class="col">
-                          <label for="duracao" class="form-label"
-                            >Duração(hrs)</label
-                          >
-                          <input
-                            formControlName="duration"
-                            type="number"
-                            class="form-control"
-                            id="duration"
-                            placeholder=""
-                            required=""
-                          />
+                          <label for="duracao" class="form-label">Duração(hrs)</label>
+                          <input formControlName="duration" type="number" class="form-control" id="duration"
+                            placeholder="" required="" />
                           <div class="invalid-feedback">
                             Digite a Duração em horas.
                           </div>
-                        </div>
-                        ​
+                        </div>​
 
                         <div class="col">
-                          <label for="modulos" class="form-label"
-                            >Módulos</label
-                          >
-                          <input
-                            formControlName="modules"
-                            type="number"
-                            class="form-control"
-                            id="modules"
-                            placeholder=""
-                            required=""
-                          />
+                          <label for="modulos" class="form-label">Módulos</label>
+                          <input formControlName="modules" type="number" class="form-control" id="modules"
+                            placeholder="" required="" />
                           <div class="invalid-feedback">
                             Digite a quantidade de Módulos
                           </div>
                         </div>
 
                         <div class="col">
-                          <label for="modulos" class="form-label"
-                            >Categoria</label
-                          >
-                          <select
-                            class="form-select"
-                            formControlName="category"
-                          >
+                          <label for="modulos" class="form-label">Categoria</label>
+                          <select class="form-select" formControlName="category">
                             <option selected>Selecione</option>
                             <option value="financas">financas</option>
                             <option value="idioma">idioma</option>
@@ -101,13 +61,8 @@
                   </div>
                   ​
                   <div class="form-floating mt-2">
-                    <textarea
-                      formControlName="description"
-                      class="form-control"
-                      placeholder="resumo do treinamento"
-                      id="description"
-                      style="height: 120px"
-                    ></textarea>
+                    <textarea formControlName="description" class="form-control" placeholder="resumo do treinamento"
+                      id="description" style="height: 120px"></textarea>
                     <label for="descricao">Resumo do treinamento</label>
                   </div>
                   ​

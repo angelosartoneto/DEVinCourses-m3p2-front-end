@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ItemRegisterTrainingComponent } from './item-register-training.component';
 
 describe('ItemRegisterTrainingComponent', () => {
