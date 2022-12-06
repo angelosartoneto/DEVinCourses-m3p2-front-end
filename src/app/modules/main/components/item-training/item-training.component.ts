@@ -7,7 +7,7 @@ import { ITraining } from 'src/app/models/training';
   styleUrls: ['./item-training.component.scss'],
 })
 export class ItemTrainingComponent implements OnInit {
-  
+
   @Input()
   item: ITraining = {
     id: 0,
@@ -19,14 +19,14 @@ export class ItemTrainingComponent implements OnInit {
     active: true,
     category: '',
     date: new Date(),
-    modules:[]
+    modules: []
   };
-  
-  formatarDuracao(duracao:number):any{
+
+  formatarDuracao(duracao: number): any {
     return duracao.toString().replace(':00:00', '')
   }
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }
