@@ -38,6 +38,10 @@ export class ItemMyTrainingComponent implements OnInit {
     this.alertService.alertDeleteTraining();
   }
 
+  suspendTraining() {
+    this.alertService.alertSuspendTraining();
+  }
+
   selectTraining(training: ITraining) {
     this.trainingService.training = training;
     this.router.navigate(['home/video']);
@@ -51,4 +55,5 @@ export class ItemMyTrainingComponent implements OnInit {
   formatarDuracao(duracao:number):any{
     return duracao.toString().replace(':00:00', '')
   }
+  
 }
