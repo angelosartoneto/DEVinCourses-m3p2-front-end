@@ -30,9 +30,9 @@ export class ItemMyTrainingComponent implements OnInit {
     private alertService: AlertService,
     private trainingService: TrainingService,
     private router: Router
-  ) {}
+  ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   removeTraining() {
     this.alertService.alertDeleteTraining();
@@ -52,8 +52,8 @@ export class ItemMyTrainingComponent implements OnInit {
     this.trainingService.PatchRecentTrainingsByUser(id, dateRefresh);
   }
 
-  formatarDuracao(duracao:number):any{
+  formatarDuracao(duracao: number): any {
     return duracao.toString().replace(':00:00', '')
   }
-  
+
 }

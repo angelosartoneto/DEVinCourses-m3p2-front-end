@@ -13,9 +13,7 @@ h1 {
 
 .button-cancel-modal {
   width: 120px;
-
   background-color: $vermelho;
-
   border-radius: 5px;
 }
 
@@ -23,7 +21,6 @@ h1 {
   font-size: 20px;
   border: none;
   background-color: $azul-escuro;
-
   &[disabled] {
     background-color: $azul-escuro;
   }

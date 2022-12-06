@@ -27,4 +27,4 @@ import { ForbiddenComponent } from './pages/forbidden/forbidden.component';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

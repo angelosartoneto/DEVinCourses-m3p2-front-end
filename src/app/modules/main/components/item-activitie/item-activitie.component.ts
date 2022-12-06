@@ -4,12 +4,12 @@ import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivitiesService } from 'src/app/services/activities/activities.service';
 
-
 @Component({
   selector: 'pro-item-activitie',
   templateUrl: './item-activitie.component.html',
   styleUrls: ['./item-activitie.component.scss']
 })
+
 export class ItemActivitieComponent implements OnInit {
 
   @Input()
@@ -22,28 +22,28 @@ export class ItemActivitieComponent implements OnInit {
   formEdit: FormGroup = new FormGroup({});
 
   open(content: any) {
-		this.modalService.open(content);
-	}
+    this.modalService.open(content);
+  }
 
   constructor(config: NgbModalConfig, private modalService: NgbModal, private formBuilder: FormBuilder, private activitiesService: ActivitiesService) {
-		config.backdrop = 'static';
-		config.keyboard = false;
+    config.backdrop = 'static';
+    config.keyboard = false;
 
     this.formEdit = formBuilder.group({
       description: ['', [Validators.required]],
-  });
-  	}
-
-  ngOnInit(): void {
+    });
   }
 
-  editActivitie(){
+  ngOnInit(): void { }
+
+  editActivitie() {
     this.item.description = this.formEdit.value.description;
     this.activitiesService.putActivities(this.item.title, this.item);
     this.modalService.dismissAll();
   }
 
-  deleteAtivitie(title:string){
+  deleteAtivitie(title: string) {
     this.activitiesService.deleteActivitie(title);
   }
+
 }

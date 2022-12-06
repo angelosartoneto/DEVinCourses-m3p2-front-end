@@ -6,6 +6,7 @@ import SERVER_AUTHENTICATIONS from 'src/app/constants/server_authentications';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthenticationService {
   userAuthorized: boolean = false;
 
@@ -21,7 +22,8 @@ export class AuthenticationService {
       .pipe();
   }
 
-  saveLocalStorage(token: string){
+  saveLocalStorage(token: string) {
     localStorage.setItem('token', token);
   }
+  
 }

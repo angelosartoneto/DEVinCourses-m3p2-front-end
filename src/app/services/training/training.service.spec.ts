@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { TrainingService } from './training.service';
 
 describe('TrainingService', () => {
@@ -13,4 +12,5 @@ describe('TrainingService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
 });

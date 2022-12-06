@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
     trainingId: 0,
     status: 0
   };
+
   userActive!: IUser;
 
   trainings: ITraining[] = [];
@@ -63,6 +64,7 @@ export class HomeComponent implements OnInit {
       centered: true,
       scrollable: true,
     });
+    
   }
 
   ngOnInit(): void {
@@ -123,6 +125,7 @@ export class HomeComponent implements OnInit {
   }
 
   registerCourse() {
+    
     this.trainingService.postRegistration(this.registration)
       .subscribe(result => console.log(result));
 

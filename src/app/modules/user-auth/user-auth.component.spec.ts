@@ -1,16 +1,14 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { UserAuthComponent } from './user-auth.component';
-
 describe('UserAuthComponent', () => {
   let component: UserAuthComponent;
   let fixture: ComponentFixture<UserAuthComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserAuthComponent ]
+      declarations: [UserAuthComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -22,4 +20,5 @@ describe('UserAuthComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });

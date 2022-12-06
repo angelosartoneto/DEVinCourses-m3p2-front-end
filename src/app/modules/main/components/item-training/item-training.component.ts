@@ -6,6 +6,7 @@ import { ITraining } from 'src/app/models/training';
   templateUrl: './item-training.component.html',
   styleUrls: ['./item-training.component.scss'],
 })
+
 export class ItemTrainingComponent implements OnInit {
 
   @Input()

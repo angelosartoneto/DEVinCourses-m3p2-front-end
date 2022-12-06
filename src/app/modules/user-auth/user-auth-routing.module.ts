@@ -4,7 +4,7 @@ import { LoginGuard } from 'src/app/guards/login.guard';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { UserAuthComponent } from './user-auth.component';
-import {ResetPasswordComponent}from './reset-password/reset-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 const routes: Routes = [
   {
@@ -34,12 +34,12 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () =>
       import('../main/main.module').then((m) => m.MainModule),
-    canActivate:[LoginGuard]
+    canActivate: [LoginGuard]
   }
 ];
-
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
+
 export class UserAuthRoutingModule { }

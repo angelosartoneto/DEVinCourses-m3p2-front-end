@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { RegistrationComponent } from './registration.component';
 
 describe('RegistrationComponent', () => {
@@ -8,9 +7,9 @@ describe('RegistrationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RegistrationComponent ]
+      declarations: [RegistrationComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(RegistrationComponent);
     component = fixture.componentInstance;
@@ -20,4 +19,5 @@ describe('RegistrationComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });
