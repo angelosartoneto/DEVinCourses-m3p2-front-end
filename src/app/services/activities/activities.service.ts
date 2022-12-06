@@ -6,17 +6,18 @@ import { IActivitie } from 'src/app/models/activitie';
 
 @Injectable({
   providedIn: 'root'
+  
 })
-export class ActivitiesService {
-  token:string | null = localStorage.getItem('token');
 
+export class ActivitiesService {
+  token: string | null = localStorage.getItem('token');
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
-    token: new HttpHeaders({ 'Autorization': 'bearer'+ this.token})
+    token: new HttpHeaders({ 'Autorization': 'bearer' + this.token })
   }
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   handleError(error: HttpErrorResponse) {
     let errorMessage = '';
@@ -31,32 +32,32 @@ export class ActivitiesService {
     return throwError(errorMessage);
   };
 
-  postActivitie(body: IActivitie){
+  postActivitie(body: IActivitie) {
     return this.http.post<IActivitie>(SERVER_ACTIVITIES, body, this.httpOptions)
-    .pipe(
-      catchError(this.handleError)
-    )
+      .pipe(
+        catchError(this.handleError)
+      )
   }
 
-  putActivities(title: string, body: IActivitie){
+  putActivities(title: string, body: IActivitie) {
     return this.http.put<IActivitie>(`${SERVER_ACTIVITIES}/${title}/edit/`, body, this.httpOptions)
-    .pipe(
-      catchError(this.handleError)
-    )
+      .pipe(
+        catchError(this.handleError)
+      )
   }
 
-  deleteActivitie(title:string){
+  deleteActivitie(title: string) {
     return this.http.delete(`${SERVER_ACTIVITIES}/${title}/edit/`, this.httpOptions)
-    .pipe(
-      catchError(this.handleError)
-    )
+      .pipe(
+        catchError(this.handleError)
+      )
   }
 
-  getAllActivities():Observable<IActivitie[]>{
+  getAllActivities(): Observable<IActivitie[]> {
     return this.http.get<IActivitie[]>(`${SERVER_ACTIVITIES}/getAll`, this.httpOptions)
-    .pipe(
-      retry(2),
-      catchError(this.handleError)
-    );
+      .pipe(
+        retry(2),
+        catchError(this.handleError)
+      );
   }
 }

@@ -4,16 +4,17 @@ import Swal from 'sweetalert2';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AlertService {
 
   constructor() { }
-
-  alertDeleteTraining(){
+  
+  alertDeleteTraining() {
     Swal.fire({
-      title: 'Deseja excluir o treinamento?',      
+      title: 'Deseja excluir o treinamento?',
       showCancelButton: true,
-      confirmButtonText: 'Sim',      
-      cancelButtonText:'Cancelar'
+      confirmButtonText: 'Sim',
+      cancelButtonText: 'Cancelar'
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
@@ -21,24 +22,26 @@ export class AlertService {
       } else if (result.isDenied) {
         Swal.fire('Não excluido', '', 'info')
       }
-    })}
+    })
+  }
 
-    alertSuspendTraining(){
-      Swal.fire({
-        title: 'Deseja suspender o treinamento?',      
-        showCancelButton: true,
-        confirmButtonText: 'Sim',      
-        cancelButtonText:'Cancelar',
-      }).then((result) => {
-        /* Read more about isConfirmed, isDenied below */
-        if (result.isConfirmed) {
-          Swal.fire('Suspenso com sucesso!', '', 'success')
-        } else if (result.isDenied) {
-          Swal.fire('Não suspendido', '', 'info')
-        }
-      })}
+  alertSuspendTraining() {
+    Swal.fire({
+      title: 'Deseja suspender o treinamento?',
+      showCancelButton: true,
+      confirmButtonText: 'Sim',
+      cancelButtonText: 'Cancelar',
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        Swal.fire('Suspenso com sucesso!', '', 'success')
+      } else if (result.isDenied) {
+        Swal.fire('Não suspendido', '', 'info')
+      }
+    })
+  }
 
-  alertUserIsRegistered(){
+  alertUserIsRegistered() {
     Swal.fire({
       icon: 'error',
       title: 'Oops...',
@@ -47,7 +50,7 @@ export class AlertService {
     })
   }
 
-  alertRegisterSuccess(){
+  alertRegisterSuccess() {
     Swal.fire({
       icon: 'success',
       title: 'Matricula efetuada com sucesso!',

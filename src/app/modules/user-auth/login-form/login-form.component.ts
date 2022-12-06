@@ -9,6 +9,7 @@ import { UserService } from 'src/app/services/user/user.service';
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.scss'],
 })
+
 export class LoginFormComponent {
   regexPassword: RegExp = /[^!@#$ %^&*()_+\-=\[\]{};':"\\|,.<>\/?]$/;
 
@@ -18,10 +19,10 @@ export class LoginFormComponent {
   });
 
   userEmails = new FormGroup({
-    ResetEmail: new FormControl('',[Validators.required,Validators.email])
+    ResetEmail: new FormControl('', [Validators.required, Validators.email])
   });
 
-  constructor(private authService: AuthenticationService,private route: Router, private userService:  UserService) {}
+  constructor(private authService: AuthenticationService, private route: Router, private userService: UserService) { }
 
   submitLogin() {
     if (this.form.invalid) {

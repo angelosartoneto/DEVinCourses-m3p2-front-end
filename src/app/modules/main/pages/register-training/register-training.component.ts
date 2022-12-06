@@ -5,8 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './register-training.component.html',
   styleUrls: ['./register-training.component.scss'],
 })
-export class RegisterTrainingComponent implements OnInit {
-  constructor() {}
 
-  ngOnInit(): void {}
+export class RegisterTrainingComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void { }
+
 }

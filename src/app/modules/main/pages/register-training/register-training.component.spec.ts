@@ -1,16 +1,14 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { RegisterTrainingComponent } from './register-training.component';
 
-describe('RegisterTrainingComponent', () => {
   let component: RegisterTrainingComponent;
   let fixture: ComponentFixture<RegisterTrainingComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RegisterTrainingComponent ]
+      declarations: [RegisterTrainingComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -22,4 +20,3 @@ describe('RegisterTrainingComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-});

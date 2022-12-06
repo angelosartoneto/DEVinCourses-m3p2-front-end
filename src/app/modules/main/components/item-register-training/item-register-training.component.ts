@@ -2,10 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
+
   selector: 'pro-item-register-training',
   templateUrl: './item-register-training.component.html',
   styleUrls: ['./item-register-training.component.scss'],
 })
+
 export class ItemRegisterTrainingComponent implements OnInit {
 
   formTraining: FormGroup = new FormGroup({});
@@ -21,8 +23,9 @@ export class ItemRegisterTrainingComponent implements OnInit {
   }
 
   ngOnInit(): void { }
-  
+
   ShowData() {
     console.log(this.formTraining);
   }
+  
 }

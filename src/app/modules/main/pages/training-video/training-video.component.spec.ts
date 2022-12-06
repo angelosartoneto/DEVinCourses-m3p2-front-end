@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TrainingVideoComponent } from './training-video.component';
 
 describe('TrainingVideoComponent', () => {
+  
   let component: TrainingVideoComponent;
   let fixture: ComponentFixture<TrainingVideoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TrainingVideoComponent ]
+      declarations: [TrainingVideoComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -22,4 +22,5 @@ describe('TrainingVideoComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });

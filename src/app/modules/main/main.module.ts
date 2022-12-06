@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -47,4 +46,5 @@ import { ItemActivitieComponent } from './components/item-activitie/item-activit
     UserAuthModule
   ],
 })
-export class MainModule {}
+
+export class MainModule { }

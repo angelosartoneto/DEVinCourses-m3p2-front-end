@@ -1,7 +1,7 @@
-export interface IModule{
+export interface IModule {
     id: number;
     trainingId: number;
-    titleModule:string;
+    titleModule: string;
     link: string;
     image: string;
     descriptionModule: string;

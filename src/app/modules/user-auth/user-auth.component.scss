@@ -1,4 +1,4 @@
-@import '/src/styles.scss';
+@import "/src/styles.scss";
 
 @mixin displayFlex($direction, $alignContent, $justify, $alignItems) {
   display: flex;
@@ -12,7 +12,6 @@ main {
   height: 100vh;
   background-color: $azul-claro;
   @include displayFlex(row, space-around, space-between, center);
-
 
   .logo-container {
     @include displayFlex(column, normal, normal, center);
@@ -31,7 +30,7 @@ main {
     }
 
     p {
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
       font-size: 29px;
       text-align: center;
 
@@ -45,9 +44,7 @@ main {
     .form-container {
       max-width: 508px;
       max-height: 662px;
-
-      background-color: #FFF;
-
+      background-color: #fff;
       border-radius: 15px;
     }
   }
@@ -56,12 +53,11 @@ main {
 // ESTILOS PARA INPUTS
 // EMMET: .input-container>(label+input)
 .input-container {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 
   label {
     font-size: 20px;
     font-weight: 700;
-
     color: $azul-escuro;
     margin-bottom: 2px;
   }
@@ -69,11 +65,8 @@ main {
   input {
     font-family: inherit;
     width: 100%;
-
     font-size: 18px;
-
     padding: 8px 0 5px 10px;
-
     border: 2px solid $azul-escuro;
     border-radius: 5px;
 
@@ -97,7 +90,6 @@ main {
   border-radius: 5px;
   border: none;
   color: white;
-
   animation: 1s linear 30ms 1;
 
   &:hover {

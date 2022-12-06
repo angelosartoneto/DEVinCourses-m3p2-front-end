@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './user-auth.component.html',
   styleUrls: ['./user-auth.component.scss']
 })
+
 export class UserAuthComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

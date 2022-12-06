@@ -11,15 +11,14 @@ import {
 } from '@angular/forms';
 import { UserService } from 'src/app/services/user/user.service';
 import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'pro-registration',
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.scss'],
 })
+
 export class RegistrationComponent implements OnInit {
-  private url = 'http://localhost:3000/Users';
   @Input() isEditingUser: boolean = false;
   User!: IUser;
   selectedFile: any;
@@ -32,9 +31,8 @@ export class RegistrationComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private userService: UserService,
-    private router: Router,
-    private http: HttpClient
-  ) {}
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.createFormValidation();
@@ -218,4 +216,5 @@ export class RegistrationComponent implements OnInit {
       this.createForm(this.User);
     });
   }
+  
 }

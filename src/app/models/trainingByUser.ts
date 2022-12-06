@@ -1,5 +1,4 @@
 import { ITraining } from "./training";
-
-export interface ITraningByUser extends ITraining{
-  userId:number;
+export interface ITraningByUser extends ITraining {
+  userId: number;
 }

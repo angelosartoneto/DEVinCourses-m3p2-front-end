@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TrainingComponent } from './training.component';
 
 describe('TrainingComponent', () => {
+
   let component: TrainingComponent;
   let fixture: ComponentFixture<TrainingComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TrainingComponent ]
+      declarations: [TrainingComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -22,4 +22,5 @@ describe('TrainingComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
 });

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { IActivitie } from 'src/app/models/activitie';
-import { ACTIVITIES_MOCK } from 'src/app/mocks/activities_mock';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivitiesService } from 'src/app/services/activities/activities.service';
@@ -10,6 +9,7 @@ import { ActivitiesService } from 'src/app/services/activities/activities.servic
   templateUrl: './activities.component.html',
   styleUrls: ['./activities.component.scss']
 })
+
 export class ActivitiesComponent implements OnInit {
 
   activities: IActivitie[] = []; //ACTIVITIES_MOCK
@@ -18,29 +18,31 @@ export class ActivitiesComponent implements OnInit {
   page = 1;
   pageSize = 20;
   newActivitie: IActivitie = {
-      title: "",
-      description: ""
+    title: "",
+    description: ""
   }
 
-  constructor(config: NgbModalConfig, private modalService: NgbModal, private formBuilder: FormBuilder, private activitiesService: ActivitiesService) {
-		config.backdrop = 'static';
-		config.keyboard = false;
+  constructor(config: NgbModalConfig, private modalService: NgbModal, 
+    formBuilder: FormBuilder, private activitiesService: ActivitiesService) {
+
+    config.backdrop = 'static';
+    config.keyboard = false;
 
     this.formActivitie = formBuilder.group({
       title: ['', [Validators.required]],
       description: ['', [Validators.required]],
-  });
-	}
+    });
+  }
 
   ngOnInit(): void {
     this.getAllActivities();
   }
 
   open(content: any) {
-		this.modalService.open(content);
-	}
+    this.modalService.open(content);
+  }
 
-  CreateActivitie(){
+  CreateActivitie() {
     this.newActivitie.title = this.formActivitie.value.title
     this.newActivitie.description = this.formActivitie.value.description
     // Chama função na service para executar o post
@@ -48,10 +50,11 @@ export class ActivitiesComponent implements OnInit {
     this.modalService.dismissAll();
   }
 
-  getAllActivities(){
+  getAllActivities() {
     this.activitiesService.getAllActivities()
-    .subscribe((activities: IActivitie[]) => {
-      this.activities = activities
-    });
+      .subscribe((activities: IActivitie[]) => {
+        this.activities = activities
+      });
   }
+  
 }
