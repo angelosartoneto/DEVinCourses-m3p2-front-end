@@ -23,6 +23,21 @@ export class AlertService {
       }
     })}
 
+    alertSuspendTraining(){
+      Swal.fire({
+        title: 'Deseja suspender o treinamento?',      
+        showCancelButton: true,
+        confirmButtonText: 'Sim',      
+        cancelButtonText:'Cancelar',
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+          Swal.fire('Suspenso com sucesso!', '', 'success')
+        } else if (result.isDenied) {
+          Swal.fire('Não suspendido', '', 'info')
+        }
+      })}
+
   alertUserIsRegistered(){
     Swal.fire({
       icon: 'error',
