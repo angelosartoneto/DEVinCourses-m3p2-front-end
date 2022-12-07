@@ -24,7 +24,7 @@ export class UserService {
   addUser(user: IUser) {
     return this.http.post(SERVER_USERS, user, { headers: this.headers }).subscribe({
       next: (res) => {
-        alert('Usuário criado com sucesso');
+        alert('Usuário criado com sucesso!');
       },
       error: (err) => {
         alert(err.message);
@@ -35,7 +35,7 @@ export class UserService {
   editUser(user: IUser, id?: number) {
     return this.http.put<IUser>(`${SERVER_USERS}/${id}`, user, { headers: this.tokenHeader }).subscribe({
       next: (res) => {
-        alert('Perfil editado com sucesso');
+        alert('Perfil editado com sucesso!');
       },
       error: (err) => {
         alert(err.message);
